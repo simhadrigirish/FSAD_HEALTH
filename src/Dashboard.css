@@ -1,0 +1,129 @@
+.dashboard {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.dashboard-content {
+  padding: clamp(20px, 5vw, 40px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard-content h1 {
+  text-align: center;
+  color: #667eea;
+  font-size: clamp(28px, 5vw, 42px);
+  margin-bottom: clamp(30px, 5vw, 50px);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+  gap: clamp(15px, 3vw, 25px);
+  margin-bottom: clamp(30px, 5vw, 50px);
+}
+
+.stat-card {
+  background: white;
+  padding: clamp(20px, 4vw, 30px);
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid #667eea;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-card h3 {
+  font-size: clamp(16px, 2.5vw, 20px);
+  color: #667eea;
+  margin-bottom: 15px;
+}
+
+.stat-number {
+  font-size: clamp(32px, 6vw, 48px);
+  font-weight: 700;
+  color: #764ba2;
+  margin: 0;
+}
+
+.bookings-section {
+  background: white;
+  padding: clamp(20px, 4vw, 40px);
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.bookings-section h2 {
+  color: #667eea;
+  font-size: clamp(22px, 4vw, 32px);
+  margin-bottom: clamp(20px, 3vw, 30px);
+  text-align: center;
+}
+
+.no-bookings {
+  text-align: center;
+  color: #999;
+  font-size: clamp(16px, 2vw, 18px);
+  padding: 40px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 500px;
+}
+
+thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+th {
+  padding: clamp(12px, 2vw, 15px);
+  text-align: left;
+  font-weight: 600;
+  font-size: clamp(14px, 2vw, 16px);
+}
+
+td {
+  padding: clamp(12px, 2vw, 15px);
+  border-bottom: 1px solid #e0e0e0;
+  font-size: clamp(14px, 2vw, 15px);
+  color: #333;
+}
+
+tbody tr:hover {
+  background: #f5f7fa;
+}
+
+.delete-btn {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+  color: white;
+  padding: clamp(6px, 1vw, 8px) clamp(12px, 2vw, 16px);
+  border: none;
+  border-radius: 6px;
+  font-size: clamp(12px, 1.5vw, 14px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+@media (max-width: 600px) {
+  th:first-child,
+  td:first-child {
+    display: none;
+  }
+}
